@@ -1,10 +1,11 @@
 import React from 'react';
+import style from './Button.module.scss'
 
 //Class component are becoming deprecated
 class Button extends React.Component {
     render() {
         return (
-            <button>
+            <button className={style.button}>
                 Button    
             </button>
         )
