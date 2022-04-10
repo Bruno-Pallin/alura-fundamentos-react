@@ -1,12 +1,12 @@
 import React from 'react';
-import { ITasks } from '../../types/task';
+import { ITask } from '../../types/task';
 import Button from '../Button';
 import style from './Formulario.module.scss'
 import {v4 as uuidv4 } from 'uuid';
 
 //Class component are becoming deprecated
 class Form extends React.Component<{
-    setTasks: React.Dispatch<React.SetStateAction<ITasks[]>>
+    setTasks: React.Dispatch<React.SetStateAction<ITask[]>>
 }> {
     state = {
         task: '',

@@ -3,13 +3,14 @@ import style from './Button.module.scss'
 
 //Class component are becoming deprecated
 class Button extends React.Component<{
-    type?: 'button' | 'submit' | 'reset' | undefined
+    type?: 'button' | 'submit' | 'reset' | undefined,
+    onClick?: () => void
 }> {
     render() {
-        const { type = 'button' } = this.props;
+        const { type = 'button', onClick } = this.props;
         return (
-            <button className={style.button} type={type}>
-                { this.props.children }  
+            <button className={style.button} type={type} onClick={onClick} >
+                {this.props.children}
             </button>
         )
     }
